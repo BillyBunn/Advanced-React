@@ -1,6 +1,9 @@
+import CreateItem from '../components/CreateItem';
+import { createCipher } from 'crypto';
+
 const Sell = () => (
   <div>
-    <p>Sell page</p>
+    <CreateItem />
   </div>
 );
 
