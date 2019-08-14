@@ -13,13 +13,14 @@ const CURRENT_USER_QUERY = gql`
   }
 `;
 
+// child is passed the payload so other render-props don't have to re-write the user query
 const User = props => (
   <Query {...props} query={CURRENT_USER_QUERY}>
     {payload => props.children(payload)}
   </Query>
 );
 
-User.PropTypes = {
+User.propTypes = {
   children: PropTypes.func.isRequired
 };
 

@@ -13,7 +13,7 @@ const Query = {
       {
         where: { id: ctx.request.userId }
       },
-      info
+      info // the actual query from the client side
     );
   }
 };
