@@ -1,9 +1,12 @@
 import App, { Container } from 'next/app';
 import Page from '../components/Page';
 import { ApolloProvider } from 'react-apollo';
+
+// HOC that makes the Apollo client available via prop 'apollo'
 import withData from '../lib/withData';
 
 class MyApp extends App {
+  // getInitialProps runs before 1st render; anything returned is exposed via props
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -13,6 +16,7 @@ class MyApp extends App {
     pageProps.query = ctx.query;
     return { pageProps };
   }
+
   render() {
     const { Component, apollo, pageProps } = this.props;
     return (
