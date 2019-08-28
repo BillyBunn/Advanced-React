@@ -1,10 +1,13 @@
-import CreateItem from '../components/CreateItem';
-import { createCipher } from 'crypto';
+import CreateItem from '../components/CreateItem'
+import PleaseSignIn from '../components/PleaseSignIn'
+import { createCipher } from 'crypto'
 
 const Sell = () => (
   <div>
-    <CreateItem />
+    <PleaseSignIn>
+      <CreateItem />
+    </PleaseSignIn>
   </div>
-);
+)
 
-export default Sell;
+export default Sell
