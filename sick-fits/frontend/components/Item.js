@@ -9,7 +9,7 @@ import DeleteItem from './DeleteItem'
 
 class Item extends React.Component {
   static propTypes = {
-    items: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired
   };
   render() {
     const { item } = this.props;
